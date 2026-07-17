@@ -1,0 +1,191 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up</title>
+  <link rel="icon" href="../media/favicon/favicon (64 x 64 px).png" type="image/png" sizes="any" />
+  <link rel="stylesheet" href="../css/signup.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+</head>
+
+<body>
+  <!-- nav hamburger-->
+  <nav>
+    <!-- Logo -->
+    <a href="../html/index.html"><img src="../media/logo/logo5.png" class="logo" alt="Logo" /></a>
+
+    <!-- Hamburger Menu -->
+    <div id="menu-icon">
+      <img src="../media/nav hamburger/menu.png" alt="Menu" width="30px" />
+    </div>
+
+    <!-- Desktop Nav -->
+    <ul class="nav-links">
+      <li><a href="../html/index.html">Home</a></li>
+      <li><a href="../html/Shop.html">Shop</a></li>
+      <li><a href="../html/Blog.html">Blog</a></li>
+      <li><a href="../html/About.html">About</a></li>
+      <li><a href="../html/contact.html">Contact</a></li>
+      <li><a href="../html/cart.html"><img src="../media/nav hamburger/cart.png" width="30px" alt="Cart" /></a></li>
+      <li><a class="active" href="../html/account.html"><img src="../media/nav hamburger/account.png" width="30px"></a>
+      </li>
+    </ul>
+
+    <!-- Sidebar Nav -->
+    <div id="sidebar">
+      <div id="close-sidebar"><img src="../media/nav hamburger/cross.png" width="25px" alt="Close" /></div>
+      <ul>
+        <li><a href="../html/index.html">Home</a></li>
+        <li><a href="../html/Shop.html">Shop</a></li>
+        <li><a href="../html/Blog.html">Blog</a></li>
+        <li><a href="../html/About.html">About</a></li>
+        <li><a href="../html/contact.html">Contact</a></li>
+        <li><a href="../html/cart.html">Cart</a></li>
+        <li><a class="active" href="../html/account.html">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- remember to change the class at the <a> to class="active" for your page -->
+  <!-- can start your page below here -->
+  <form class="login-container" id="signupForm">
+    <div class="form">
+      <h2>Join Our Community Today!</h2>
+      <p class="sentence">Sign Up to Fleur de Lait</p>
+
+      <!--Sign Up-->
+      <div class="fname">
+        <label for="fname">First Name</label>
+        <input type="text" placeholder="e.g. Mah" name="fname" required>
+      </div>
+
+      <div class="lname">
+        <label for="lname">Last Name</label>
+        <input type="text" placeholder="e.g. Ai Kim" name="lname" required>
+      </div>
+
+      <div class="email">
+        <label for="email">Email</label>
+        <input type="email" placeholder="e.g. fleurdelait@gmail.com" name="email" required>
+      </div>
+
+      <div class="pwd">
+        <label for="pwd">Password</label>
+        <div class="pwd-box">
+          <input type="password" placeholder="e.g. 520_FleurdeLait" name="pwd" id="pwd"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+            title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+            required>
+          <span class="material-symbols-outlined" id="togglePwd" onclick="showPwd()">visibility_off</span>
+        </div>
+      </div>
+
+      <div id="message">
+        <h4>Password must contain the following:</h4>
+        <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+        <p id="number" class="invalid">A <b>number</b></p>
+        <p id="symbol" class="invalid">A <b>special character</b></p>
+        <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+      </div>
+
+      <div class="address">
+        <label for="address">Address</label>
+        <input type="text" placeholder="e.g. No. 5, Jalan Universiti" name="address" required>
+      </div>
+
+      <div class="postcode">
+        <label for="postcode">Postcode</label>
+        <input type="number" placeholder="e.g. 47500" name="postcode" required>
+      </div>
+
+      <div class="city">
+        <label for="city">City</label>
+        <input type="text" placeholder="e.g. Petaling Jaya" name="city" required>
+      </div>
+
+      <div class="state">
+        <label for="state">State</label>
+        <select id="state" name="state" required>
+          <option value="-- Select State --">-- Select State --</option>
+          <option value="Johor">Johor</option>
+          <option value="Kedah">Kedah</option>
+          <option value="Kelantan">Kelantan</option>
+          <option value="Kuala Lumpur">Kuala Lumpur</option>
+          <option value="Malacca">Malacca</option>
+          <option value="Negeri Sembilan">Negeri Sembilan</option>
+          <option value="Pahang">Pahang</option>
+          <option value="Penang">Penang</option>
+          <option value="Perak">Perak</option>
+          <option value="Perlis">Perlis</option>
+          <option value="Sabah">Sabah</option>
+          <option value="Sarawak">Sarawak</option>
+          <option value="Selangor">Selangor</option>
+          <option value="Terengganu">Terengganu</option>
+        </select>
+      </div>
+
+      <div class="text">
+        <label>
+          <input type="checkbox" checked="checked" name="agree">I agree to <a href="#">Terms and Conditions</a>
+        </label>
+
+      </div>
+
+      <button type="submit" id="myBtn" onclick="triggerAlertAndRedirectSignUp()">Sign Up</button>
+    </div>
+
+    <div class="form-image">
+      <img src="../media/product/product 2.png" alt="Signup Visual" />
+    </div>
+  </form>
+
+  <!-- Insert page content above this -->
+  <!-- footer -->
+  <footer class="padding-content">
+    <div class="col">
+      <img class="logo" src="../media/logo/name cropped.png" alt="">
+      <h4>Contact</h4>
+      <p><strong>Address: </strong>No. 5, Jalan Universiti, Subang Jaya</p>
+      <p><strong>Phone: </strong>03-7491 8622</p>
+      <p><strong>Hours: </strong>10:00 - 18:00, Mon - Sat</p>
+      <div class="follow">
+        <h4>Follow us</h4>
+        <div class="icon">
+          <i><a href="#"><span class="icon fb"></span></a></i>
+          <i><a href="#"><span class="icon ig"></span></a></i>
+          <i><a href="#"><span class="icon pt"></span></a></i>
+          <i><a href="#"><span class="icon x"></span></a></i>
+          <i><a href="#"><span class="icon yt"></span></a></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <h4>About</h4>
+      <a href="#">About us</a>
+      <a href="#">Delivery Informations</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+      <a href="#">Contact Us</a>
+    </div>
+
+    <div class="col">
+      <h4>About</h4>
+      <a href="#">My Account</a>
+      <a href="#">Sign In</a>
+      <a href="#">View Cart</a>
+      <a href="#">My Wishlist</a>
+      <a href="#">Track My Order</a>
+      <a href="#">Help</a>
+    </div>
+
+    <div class="copyright">
+      <p>© Fleur de Lait. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../js/scripts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Pacifico&display=swap');
+
+
+/*Banner*/
+#page-header{
+    background-image: url(../media/cart/cart_banner.jpg);
+    width: 100%;
+    min-height: 50vh;
+    background-size: cover;
+    background-position: 80% 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    border:none;
+    padding: 10px;
+    position: relative;
+}
+
+section>h2{
+    font-size: 60px;
+    line-height: 60px;
+    letter-spacing: 4px;
+    text-shadow: -10px 0 10px rgba(0, 0, 0, 0.347);
+    color:black;
+    font-family: "Pacifico", cursive;
+    font-weight: 300;
+    font-style: normal;
+    margin:10px;
+}
+
+section>p{
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 25px;
+    color:#4d3724;
+}
+
+/*Cart*/
+.section-p1{
+  padding: 40px 80px;
+}
+
+#cart{
+    overflow-x: auto;
+}
+
+#cart table{
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin: 20px 0px;
+    white-space: wrap;
+}
+
+#cart table tbody{
+    font-family: "Newsreader", serif;
+    font-optical-sizing: auto;
+    font-weight: 300px;
+    font-style: light;
+}
+
+#cart table img{
+    width: 70px;
+}
+
+#cart table tr {
+  border-bottom: 0.7px solid #9f8f80;
+
+}
+
+#cart table td:nth-child(1){
+    width: 100px;
+    text-align: center;
+}
+
+#cart table td:nth-child(2){
+    width: 120px;
+    text-align: center;
+}
+
+#cart table td:nth-child(3){
+    width: 250px;
+    text-align: center;
+}
+
+#cart table td:nth-child(4),
+#cart table td:nth-child(5),
+#cart table td:nth-child(6){
+    width: 150px;
+    text-align: center;
+}
+
+#cart table td:nth-child(5) input{
+    width: 70px;
+    padding: 10px 5px 10px 15px;
+    border: 1px solid #9f8f80;
+    border-radius: 5px;
+}
+
+#cart table thead{
+    border: 1.5px solid #9f8f80;
+    border-left: none;
+    border-right: none;
+}
+
+#cart table thead td{
+    font-family: "Newsreader", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: semibold;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 18px 0;
+}
+
+#cart table tbody tr td{
+    padding-top: 15px;
+}
+
+#cart table tbody tr a{
+    text-decoration: none;
+}
+
+#cart table .material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+  color: #1a1a1a;
+}
+
+#cart table tbody tr a span:hover{
+  color:#c7a96b;
+}
+
+#cart table tbody tr input:hover{
+  box-shadow: 5px 3px 3px rgba(0, 0, 0, 0.142);
+}
+
+#cart table tbody td{
+    font-size: 15px;
+}
+
+#cart table tbody td img{
+  border-radius: 10px;
+}
+
+
+/*Apply Coupon & Check out*/
+#cart-add{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px 40px;
+}
+
+#cart-add div h3{
+    font-size:24px;
+    font-family: "Newsreader", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: semibold;
+}
+
+#coupon{
+    width: 400px;
+    margin-bottom: 30px;
+}
+
+#coupon h3,
+#subtotal h3{
+    padding-bottom: 15px;
+}
+
+
+#coupon input{
+    padding: 10px 15px;
+    outline: none;
+    width: 60%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #e2e9e1;
+    font-family: "Newsreader", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+#coupon button,
+#subtotal button{
+    background-color: #f8f3e8;
+    color: #765539;
+    font-family: "Newsreader", serif;
+    font-optical-sizing: auto;
+    font-weight: 300px;
+    font-style: regular;
+    padding: 12px 20px;
+    border-radius: 7px;
+    border: 1px solid #9f8f80;
+}
+
+#coupon input:hover,
+#coupon button:hover,
+#subtotal button:hover{
+  box-shadow: 7px 5px 5px rgba(0, 0, 0, 0.221);
+}
+
+#subtotal{
+    width: 45%;
+    min-width: fit-content;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    border: 1.2px solid #9f8f80;
+    border-radius: 5px;
+    padding: 30px;
+}
+
+#subtotal table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+    font-family: "Newsreader", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: regular;
+}
+
+#subtotal table td{
+    width: 50%;
+    border: 1px solid #9f8f80;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+/*Responsive Header and Footer*/
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+
+  #menu-icon {
+    display: block;
+  }
+
+  nav {
+    padding: 20px;
+  }
+
+  .logo {
+    width: 150px;
+  }
+  .container {
+    padding: 0;
+    margin: 0;
+  }
+  .slider-wrapper {
+    position: relative;
+    width: 100%;
+    height: 40%;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 658px) {
+  #product1 .pro-container {
+    justify-content: center;
+  }
+}
+
+
+/*BANNER*/
+@media (min-width: 768px){
+ #page-header h2{
+    font-size: 70px;
+    line-height: 110%;
+  }
+  
+}
+
+@media (min-width: 900px){
+  #page-header p{
+      font-size: 40px;
+  }
+
+}

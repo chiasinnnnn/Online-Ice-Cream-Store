@@ -1,0 +1,261 @@
+/*========================================*/
+/*Banner*/
+#page-header {
+  background-image: url(../media/shop/ice-cream-banner.png);
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  background-position: 80% 25%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+#page-header h2{
+    font-size: max(8vw, 35px);
+    line-height: 60px;
+    text-shadow: -10px 0 10px rgba(0, 0, 0, 0.347);
+    color:#312418;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    margin:10px;
+}
+
+#page-header p{
+    margin-top: 20px;
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    text-shadow: -10px 0 10px rgba(0, 0, 0, 0.347);
+    font-weight: 700;
+    font-style: normal;
+    font-size: max(35px);
+    color:#f6dec9;
+}
+/*============================================*/
+/*Shop*/
+
+
+#product1 .pro-container {
+  display: flex;
+  justify-content:center;
+  flex-wrap: wrap;
+}
+
+.section-p1 {
+  padding: 40px 80px;
+}
+
+#product1 .pro {
+  position: relative;
+  width: 23%;
+  min-width: 250px;
+  padding: 10px 12px;
+  border: 1px solid #b86b779b;
+  border-radius: 25px;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+  margin: 10px;
+  transition: 0.2s ease;
+}
+
+#product1 .pro:hover {
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+
+#product1 .pro img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+#product1 .pro .des {
+  text-align: start;
+  padding: 10px 0;
+}
+
+#product1 .pro .des span {
+  color: #606063;
+  
+}
+
+#product1 .pro .des h5 {
+  padding-top: 7px;
+  color: #1a1a1a;
+  font-size: 14px;
+}
+
+#product1 .pro .des i {
+  font-size: 12px;
+  color: rgb(243, 181, 25);
+}
+
+#product1 .pro .des h4 {
+  padding-top: 7px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #181717;
+}
+
+#product1 .pro a {
+  text-decoration: none;
+}
+
+#product1 .pro .cart {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  background-color: #cb78860f;
+  border: 1px solid #b86b779b;
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#product1 .pro .cart .material-symbols-outlined {
+  font-size: 20px;
+}
+
+#page {
+  text-align: center;
+}
+
+#page a {
+  text-decoration: none;
+  background-color: #3e2723;
+  padding: 15px 20px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 600;
+}
+
+#page a.active,
+#page a:hover {
+  background-color: #8d6e63;
+}
+
+/*============================================*/
+/*Product*/
+
+#prodetails {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  position: relative;
+}
+
+/*============================================*/
+#prodetails .single-pro-image img {
+  width: 100%;
+  margin-right: 50px;
+  border-radius: 25px;
+}
+#prodetails .single-pro-image {
+  width: 30%;
+  padding: 0;
+  margin-right: 50px;
+}
+
+#prodetails .single-pro-details {
+  width: 50%;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+#prodetails .single-pro-details h6 {
+  font-size: 20px;
+}
+#prodetails .single-pro-details h4 {
+  padding: 40px 0 20px 0;
+}
+
+#prodetails .single-pro-details h2 {
+  font-size: 26px;
+}
+#prodetails .single-pro-details input {
+  width: 50px;
+  height: 47px;
+  padding-left: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+#prodetails .single-pro-details input:focus {
+  outline: none;
+}
+
+#prodetails .single-pro-details button {
+  margin-top: 10px;
+  background-color: #3e2723;
+  color: #fff;
+  width: 150px;
+}
+
+#prodetails .single-pro-details button:hover{
+  background-color: #8d6e63;
+}
+
+#prodetails .single-pro-details span {
+  line-height: 25px;
+}
+
+#prodetails .section-p1 .close-button {
+  align-self: flex-end;
+}
+
+#prodetails .section-p1 .close-button img {
+  cursor: pointer;
+}
+
+button.normal {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px 30px;
+  color: #000;
+  background-color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+}
+
+/*============================================*/
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+
+  #menu-icon {
+    display: block;
+  }
+
+  nav {
+    padding: 20px;
+  }
+
+  .logo {
+    width: 150px;
+  }
+}
+@media (max-width: 700px) {
+  #product1 .pro-container {
+    justify-content: center;
+  }
+
+  #prodetails {
+    flex-direction: column;
+  }
+  #prodetails .single-pro-image {
+    width: 60%;
+    padding: 0;
+    margin-right: 30px;
+  }
+}

@@ -1,0 +1,339 @@
+
+/* TEAM BANNER IMAGE */
+.page-header-container {
+  padding: 2rem;
+  margin: 10px auto;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+#page-header {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: -1px -1px 73px 2px rgba(0, 0, 0, 0.282);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+#page-header img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 40px 80px;
+  margin: 0 auto;
+  flex: 1;
+}
+
+/* ===== HISTORY SECTION ===== */
+.history {
+  margin: 60px 0;
+}
+
+.history h2{
+    font-size: max(5.5vw,50px);
+}
+.history p {
+  font-size: max(1.5vw, 22px);
+  line-height: 1.7;
+  color: #5a4a3a;
+  margin: 0 auto 30px auto;
+  max-width: 1000px;
+  text-align: justify;
+  margin-left: 55%;
+}
+
+.history img {
+  float: left;
+  margin: 30px 60px 30px 20px;
+  width: 45%;
+  max-width: 500px;
+  border: 1px solid #d4a5a5;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+.clear {
+  clear: both;
+}
+
+/* ===== FUN FACTS SECTION ===== */
+section h2{
+    font-size: max(5.5vw,50px);
+}
+section ul {
+  text-align: center;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0;
+  list-style-type: none;
+}
+
+section li {
+  margin-bottom: 20px;
+  line-height: 1.7;
+  font-size: 1.1em;
+  color: #78573b;
+  padding: 12px 25px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-left: 4px solid #d4a5a5;
+  text-align: left;
+  border-radius: 0 8px 8px 0;
+  font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: max(1.5vw, 22px);
+}
+
+section li strong {
+  color: black;
+  font-weight: 600;
+}
+
+/* ===== MISSION & VISION SECTION ===== */
+.mission-vision {
+  padding: 2rem;
+}
+
+.mission-vision-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mission-box,
+.vision-box {
+  flex: 1 1 40%;
+  min-width: 300px;
+  background-color: #f9f3f3;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-size: max(1.2vw, 20px);
+  line-height: 1.6;
+  color: #443322;
+  transition: transform 0.3s ease;
+}
+
+.mission-box:hover,
+.vision-box:hover {
+  transform: translateY(-5px);
+}
+
+.mission-box h2,
+.vision-box h2 {
+  font-size: max(2.2vw, 35px);
+  margin-bottom: 0.8rem;
+  color: #b85c38;
+}
+/* ===== TEAM SECTION ===== */
+.team {
+  margin: 80px 0;
+  text-align: center;
+}
+
+.team-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 40px auto;
+  max-width: 1100px;
+}
+
+.team-member {
+  width: 220px;
+  padding: 25px 15px;
+  transition: all 0.3s ease;
+  background-color: #fff6f2;
+  border-radius: 10px;
+}
+
+.team-member img {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  border: 3px solid #d4a5a5;
+  object-fit: cover;
+  margin-bottom: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.team-member:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+}
+
+.team-member h3 {
+  margin: 10px 0 5px;
+  color: #5a4a3a;
+  font-weight: 700;
+  font-size: 1.2em;
+}
+
+.studentid {
+  font-weight: 600;
+  color: #a78a7a;
+  margin-bottom: 10px;
+  font-size: 0.95em;
+  letter-spacing: 0.5px;
+}
+
+.description {
+  font-size: 0.9em;
+  line-height: 1.5;
+  color: #666;
+  margin: 0 auto;
+  max-width: 200px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+
+  #menu-icon {
+    display: block;
+  }
+
+  nav {
+    padding: 20px;
+  }
+
+  .logo {
+    width: 150px;
+  }
+  .container {
+    padding: 0 10px;
+    margin: 0;
+  }
+  .page-header-container {
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  #page-header {
+    width: 100vw;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  #page-header img {
+    width: 100vw;
+    height: auto;
+    border-radius: 0;
+  }
+  .history img {
+    float: none;
+    width: 80%;
+    margin: 20px auto 30px;
+    display: block;
+  }
+  .history p {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 80%;
+    max-width: none;
+  }
+
+  .mission-vision {
+    margin: 60px 20px;
+    padding: 30px 15px;
+  }
+
+  .mission-vision-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 25px;
+  }
+
+  .mission-box,
+  .vision-box {
+    width: 100%;
+    padding: 35px 25px;
+    min-height: auto;
+  }
+
+  .team-row {
+    gap: 20px;
+  }
+
+  .team-member {
+    width: 200px;
+  }
+}
+@media (max-width: 600px) {
+  .mission-vision {
+    margin: 50px 15px;
+    border-radius: 20px;
+    padding: 25px 10px;
+  }
+
+  .mission-box,
+  .vision-box {
+    padding: 30px 20px; /* More balanced padding */
+  }
+
+  .mission-box p,
+  .vision-box p {
+    line-height: 1.7; /* Slightly tighter line height */
+    margin: 15px 0 0; /* Adjusted margins */
+  }
+}
+
+@media (max-width: 480px) {
+
+  .history p {
+    font-size: 0.95em;
+  }
+
+  section li {
+    font-size: 0.95em;
+    padding: 8px 15px;
+  }
+
+  .team-member {
+    padding: 20px 10px;
+  }
+
+  .team-member img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .mission-vision {
+    margin: 40px 10px;
+  }
+
+  .mission-box,
+  .vision-box {
+    padding: 25px 15px;
+  }
+
+  .mission-box p,
+  .vision-box p {
+    font-size: 1em; /* Maintain readable size */
+    text-align: left; /* Better for mobile reading */
+  }
+}

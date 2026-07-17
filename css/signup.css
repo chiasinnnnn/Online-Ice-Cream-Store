@@ -1,0 +1,488 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Pacifico&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Newsreader", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: regular;
+  background-color: #f8f3e8;
+}
+
+body.fade-out {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+body.fade-in {
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+.padding-content {
+  padding: 40px 80px;
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+/* NAVIGATION */
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff2eb;
+  padding: 20px 40px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  flex-wrap: wrap;
+}
+
+.logo {
+  width: 200px;
+}
+
+/* HAMBURGER MENU */
+#menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+/* DESKTOP NAVIGATION */
+.nav-links {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: #4c3725;
+  padding: 10px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ee9d9d;
+}
+
+.nav-links a.active::after,
+.nav-links a:hover::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: 35%;
+  width: 30%;
+  height: 2px;
+  background-color: #ee9d9d;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+/* SIDEBAR */
+#sidebar {
+  position: fixed;
+  right: -100%;
+  top: 0;
+  height: 100vh;
+  width: 250px;
+  background-color: #fff2eb38;
+  backdrop-filter: blur(25px);
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  transition: right 0.4s ease-in-out;
+}
+
+#sidebar ul {
+  list-style: none;
+  margin-top: 40px;
+}
+
+#sidebar ul li {
+  margin: 20px 0;
+}
+
+#sidebar ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  transition: 0.3s ease;
+}
+
+#sidebar ul li a.active,
+#sidebar ul li a:hover {
+  color: #ee9d9d;
+}
+
+/* CLOSE BUTTON */
+#close-sidebar {
+  align-self: flex-start;
+  cursor: pointer;
+}
+
+/* footer */
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: #765539;
+  padding-bottom: 0 !important;
+}
+
+footer .col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+footer .logo {
+  margin-bottom: 30px;
+  width: max(15vw, 200px);
+  min-width: 175px;
+  height: auto;
+}
+
+footer h4 {
+  font-size: max(1.35vw, 14px);
+  padding-bottom: 20px;
+}
+
+footer p {
+  font-size: max(1vw, 13px);
+  font-family:"Newsreader", serif ;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: regular;
+  margin: 0 0 8px 0;
+}
+
+footer a {
+  font-size: max(0.75vw, 13px);
+  text-decoration: none;
+  margin: 0 0 8px 0;
+  color: #765539;
+  margin-bottom: 10px;
+}
+
+footer .follow {
+  margin-top: 20px;
+}
+
+footer .follow i {
+  padding-right: max(1vw, 4px);
+  cursor: pointer;
+}
+
+.icon {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-image 0.3s ease;
+  margin-right: 8px; /* optional spacing */
+}
+
+/* Default state */
+.icon .fb {
+  background-image: url("../media/social/facebook.png");
+}
+.icon .ig {
+  background-image: url("../media/social/instagram.png");
+}
+.icon .pt {
+  background-image: url("../media/social/pinterest.png");
+}
+.icon .x {
+  background-image: url("../media/social/x.png");
+}
+.icon .yt {
+  background-image: url("../media/social/youtube.png");
+}
+
+/* Hover state */
+.icon .fb:hover {
+  background-image: url("../media/social/facebook-hover.png");
+}
+.icon .ig:hover {
+  background-image: url("../media/social/instagram-hover.png");
+}
+.icon .pt:hover {
+  background-image: url("../media/social/pinterest-hover.png");
+}
+.icon .x:hover {
+  background-image: url("../media/social/x-hover.png");
+}
+.icon .yt:hover {
+  background-image: url("../media/social/youtube-hover.png");
+}
+
+.icon:hover {
+  filter: brightness(1) contrast(1.1);
+}
+
+footer .copyright {
+  margin-top: 1rem;
+  width: 100%;
+  text-align: center;
+}
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+
+  #menu-icon {
+    display: block;
+  }
+
+  nav {
+    padding: 20px;
+  }
+
+  .logo {
+    width: 150px;
+  }
+
+  .container {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.login-container {
+  display: flex;
+  width: 90%;
+  max-width: 1000px;
+  margin: 60px auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form {
+    background-color: #f8f3e8;
+    padding: 60px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1.3;
+    box-sizing: border-box;
+}
+
+input[type=email], input[type=password], input[type=text], input[type=number], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, input[type=number]:focus, select:focus {
+    border: 3px solid #555;
+}
+
+button {
+    background-color: #9f8f80;
+    padding: 14px 20px;
+    margin: 20px auto 0;
+    border: none;
+    cursor: pointer;
+    width: 90%;
+    text-align: center;
+    border-radius: 4px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.pwd-box {
+    position: relative;
+}
+    
+input[type=password] {
+    padding-right: 40px;
+}
+
+.material-symbols-outlined {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #555;
+}
+
+h2 {
+    text-align: center;
+}
+
+.sentence {
+    font-size: small;
+    text-align: center;
+    opacity: 0.6;
+}
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+  display:none;
+  background: white;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+  border-radius: 4px;
+}
+
+#message p {
+  padding: 10px 35px;
+  font-size: 14px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "✓";
+}
+
+/* Add a red text color and an "x" icon when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "✗";
+}
+
+.form-image {
+  flex: 0.7;
+  min-width: 0;
+}
+
+.form-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+.text input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.text a:hover {
+    opacity: 0.6;
+}
+
+/* Hide image on small screens */
+@media (max-width: 900px) {
+  .login-container {
+    flex-direction: column;
+    width: 90%;
+    margin: 30px 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 20px;
+  }
+
+  .form-image {
+    display: none;
+  }
+
+  .form {
+    max-width: 100%;
+    width: 100%;
+    margin: 0px auto;
+    padding: 30px 20px;
+    box-shadow: none;
+    border-radius: 20px;
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+    height: auto;
+    width: 90%;
+    margin: 40px auto;
+    box-shadow: none; 
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form-image {
+    display: none;
+  }
+
+  .form {
+    border-radius: 20px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+    width: 100%;
+    max-width: 400px;
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    width: calc(100% - 30px);
+    margin: 30px auto;
+    border-radius: 20px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08); 
+  }
+
+  .form {
+    padding: 25px 15px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
